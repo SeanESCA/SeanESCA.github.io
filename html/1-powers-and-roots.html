@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sean Soon" />
+  <title>Powers and Roots</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/callout.css" />
+  <link rel="stylesheet" href="../css/screen.css" />
+  <link rel="stylesheet" href="../css/print.css" />
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="2-transformations.html" accesskey="n" rel="next" title="Transformations">Transformations</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="index.html" accesskey="p" rel="previous" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+</div>
+</nav>
+<h1 data-number="1" id="powers-and-roots"><span
+class="header-section-number">1</span> Powers and Roots</h1>
+<h2 data-number="1.1" id="surds"><span
+class="header-section-number">1.1</span> Surds</h2>
+<p>A surd is an expression of the form
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><msqrt><mi>b</mi></msqrt></mrow><annotation encoding="application/x-tex">a + \sqrt{b}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b \ge 0</annotation></semantics></math>
+are rational numbers.</p>
+<h3 data-number="1.1.1" id="rationalising-the-denominator"><span
+class="header-section-number">1.1.1</span> Rationalising the
+Denominator</h3>
+<p>Suppose that we have a fraction
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>y</mi><mrow><mi>a</mi><mo>+</mo><msqrt><mi>b</mi></msqrt></mrow></mfrac><annotation encoding="application/x-tex">\frac{y}{a + \sqrt{b}}</annotation></semantics></math>,
+where the denominator contains a surd. <em>Rationalising the
+denominator</em> essentially means removing the surd from the
+denominator. We can achieve this by multiplying the numerator and
+denominator by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>−</mo><msqrt><mi>b</mi></msqrt></mrow><annotation encoding="application/x-tex">a - \sqrt{b}</annotation></semantics></math>:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mfrac><mi>y</mi><mrow><mi>a</mi><mo>+</mo><msqrt><mi>b</mi></msqrt></mrow></mfrac></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>y</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><msqrt><mi>b</mi></msqrt><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><msqrt><mi>b</mi></msqrt><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><msqrt><mi>b</mi></msqrt><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>y</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><msqrt><mi>b</mi></msqrt><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mi>b</mi></mrow></mfrac><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+\frac{y}{a + \sqrt{b}} 
+&amp;= \frac{y(a - \sqrt{b})}{(a + \sqrt{b})(a - \sqrt{b})} \\
+&amp;= \frac{y(a - \sqrt{b})}{a^{2} - b}.
+\end{align*}</annotation></semantics></math></p>
+<p>Since
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+are rational (from the definition of a surd), so will the denominator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a^{2} - b</annotation></semantics></math>.</p>
+</body>
+</html>
