@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sean Soon" />
+  <title>Probability</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/callout.css" />
+  <link rel="stylesheet" href="../css/screen.css" />
+  <link rel="stylesheet" href="../css/print.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Next:</span> <a href="5-discrete-probability-distributions.html" accesskey="n" rel="next" title="Discrete Probability Distributions">Discrete Probability Distributions</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="3-transformations.html" accesskey="p" rel="previous" title="Transformations">Transformations</a>
+</span>
+</div>
+</nav>
+<h1 data-number="4" id="probability"><span
+class="header-section-number">4</span> Probability</h1>
+<h2 data-number="4.1" id="inclusion-exclusion-rule"><span
+class="header-section-number">4.1</span> Inclusion-Exclusion Rule</h2>
+<p>Let <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> be events. Then,</p>
+<p><span class="math display">\[
+\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap
+B).
+\]</span></p>
+<h2 data-number="4.2" id="mutual-exclusivity"><span
+class="header-section-number">4.2</span> Mutual Exclusivity</h2>
+<p>Two events <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> are <strong>mutually exclusive
+(pairwise disjoint)</strong> if, and only if,</p>
+<p><span class="math display">\[
+\mathbb{P}(A \cap B) = 0.
+\]</span></p>
+<p>If <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> are pairwise disjoint, then the <a
+href="4-probability.html#inclusion-exclusion-rule">inclusion-exclusion
+rule</a> simplifies to</p>
+<p><span class="math display">\[
+\mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B).
+\]</span></p>
+<h2 data-number="4.3" id="independence"><span
+class="header-section-number">4.3</span> Independence</h2>
+<h3 data-number="4.3.1" id="independence-of-events"><span
+class="header-section-number">4.3.1</span> Independence of Events</h3>
+<p>Two events <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> are independent if, and only if,</p>
+<p><span class="math display">\[
+\mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B).
+\]</span></p>
+<h3 data-number="4.3.2"
+id="independence-of-discrete-random-variables"><span
+class="header-section-number">4.3.2</span> Independence of Discrete
+Random Variables</h3>
+<p>Let <span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> be discrete random variables. Then,
+<span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> are independent if, and only if, for
+all possible <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span>,</p>
+<p><span class="math display">\[
+\mathbb{P}(X = x, Y = y) = \mathbb{P}(X = x)\mathbb{P}(Y = y).
+\]</span></p>
+</body>
+</html>

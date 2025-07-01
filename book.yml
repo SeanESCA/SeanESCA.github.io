@@ -9,7 +9,7 @@ css:
   - ../css/print.css
   
 html-math-method:
-  method: mathml
+  method: mathjax
 
 to: chunkedhtml
 template: chunkedhtml.html
@@ -19,4 +19,8 @@ number-sections: true
 split-level: 1
 input-files:
 - ./md/powersandroots.md
+- ./md/sequences.md
 - ./md/transformations.md
+- ./md/probability.md
+- ./md/independence.md
+- ./md/discretedistributions.md

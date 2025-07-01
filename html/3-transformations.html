@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Sean Soon" />
-  <title>Powers and Roots</title>
+  <title>Transformations</title>
   <style>
     div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
     span.navlink { flex: 1; }
@@ -45,37 +45,42 @@
 </div>
 <div class="sitenav">
 <span class="navlink">
-<span class="navlink-label">Next:</span> <a href="2-sequences.html" accesskey="n" rel="next" title="Sequences">Sequences</a>
+<span class="navlink-label">Next:</span> <a href="4-probability.html" accesskey="n" rel="next" title="Probability">Probability</a>
 </span>
 <span class="navlink">
-<span class="navlink-label">Previous:</span> <a href="index.html" accesskey="p" rel="previous" title="Sean's Revision Notes">Sean's Revision Notes</a>
+<span class="navlink-label">Previous:</span> <a href="2-sequences.html" accesskey="p" rel="previous" title="Sequences">Sequences</a>
 </span>
 </div>
 </nav>
-<h1 data-number="1" id="powers-and-roots"><span
-class="header-section-number">1</span> Powers and Roots</h1>
-<h2 data-number="1.1" id="surds"><span
-class="header-section-number">1.1</span> Surds</h2>
-<p>A surd is an expression of the form <span class="math inline">\(a +
-\sqrt{b}\)</span>, where <span class="math inline">\(a\)</span> and
-<span class="math inline">\(b \ge 0\)</span> are rational numbers.</p>
-<h3 data-number="1.1.1" id="rationalising-the-denominator"><span
-class="header-section-number">1.1.1</span> Rationalising the
-Denominator</h3>
-<p>Suppose that we have a fraction <span
-class="math inline">\(\frac{y}{a + \sqrt{b}}\)</span>, where the
-denominator contains a surd. <em>Rationalising the denominator</em>
-essentially means removing the surd from the denominator. We can achieve
-this by multiplying the numerator and denominator by <span
-class="math inline">\(a - \sqrt{b}\)</span>:</p>
-<p><span class="math display">\[\begin{align*}
-\frac{y}{a + \sqrt{b}}
-&amp;= \frac{y(a - \sqrt{b})}{(a + \sqrt{b})(a - \sqrt{b})} \\
-&amp;= \frac{y(a - \sqrt{b})}{a^{2} - b}.
-\end{align*}\]</span></p>
-<p>Since <span class="math inline">\(a\)</span> and <span
-class="math inline">\(b\)</span> are rational (from the definition of a
-surd), so will the denominator <span class="math inline">\(a^{2} -
-b\)</span>.</p>
+<h1 data-number="3" id="transformations"><span
+class="header-section-number">3</span> Transformations</h1>
+<h2 data-number="3.1" id="applying-transformations-to-functions"><span
+class="header-section-number">3.1</span> Applying Transformations to
+Functions</h2>
+<p>There are three possible types of transformations you can be asked to
+apply to a function: translations, reflections, and stretches. Given the
+curve <span class="math inline">\(y = f(x)\)</span>,</p>
+<ul>
+<li><p>a translation by the vector <span
+class="math inline">\(\begin{pmatrix}a \\ b\end{pmatrix}\)</span> gives
+the curve <span class="math inline">\(y = f(x - a) +
+b\)</span>.</p></li>
+<li><p>a reflection in the <em>x-axis</em> gives <span
+class="math inline">\(y = -f(x)\)</span>.</p></li>
+<li><p>a reflection in the <em>y-axis</em> gives <span
+class="math inline">\(y = f(-x)\)</span>.</p></li>
+<li><p>a stretch by a scale factor of <span
+class="math inline">\(c\)</span> in the direction of <em>y-axis</em>
+gives <span class="math inline">\(y = a \cdot f(x)\)</span>.</p></li>
+<li><p>a stretch by a scale factor of <span
+class="math inline">\(c\)</span> in the direction of <em>x-axis</em>
+gives <span class="math inline">\(y = f
+\left(\frac{x}{a}\right)\)</span>.</p></li>
+</ul>
+<p>You may find it helpful to visualise the curve <span
+class="math inline">\(y = f(x)\)</span> before and after each
+transformation, for which <a href="https://www.desmos.com/calculator"
+target="_blank">Desmos’s graphing calculator (opens in new tab)</a> can
+be helpful.</p>
 </body>
 </html>
