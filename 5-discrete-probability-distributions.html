@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sean Soon" />
+  <title>Discrete Probability Distributions</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/callout.css" />
+  <link rel="stylesheet" href="../css/screen.css" />
+  <link rel="stylesheet" href="../css/print.css" />
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<nav id="sitenav">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Up:</span> <a href="index.html" accesskey="u" rel="up" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Top:</span> <a href="index.html" accesskey="t" rel="top" title="Sean's Revision Notes">Sean's Revision Notes</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+</span>
+<span class="navlink">
+<span class="navlink-label">Previous:</span> <a href="4-probability.html" accesskey="p" rel="previous" title="Probability">Probability</a>
+</span>
+</div>
+</nav>
+<h1 data-number="5" id="discrete-probability-distributions"><span
+class="header-section-number">5</span> Discrete Probability
+Distributions</h1>
+<h2 data-number="5.1" id="bernoulli-distribution"><span
+class="header-section-number">5.1</span> Bernoulli Distribution</h2>
+<p>Let <span class="math inline">\(X\)</span> be a random variable that
+follows a Bernoulli distribution with success probability <span
+class="math inline">\(p\)</span>, denoted <span class="math inline">\(X
+\sim \mathrm{Bern}(p)\)</span>. Then,</p>
+<p><span class="math display">\[
+\mathbb{P}(X = x) = \begin{cases}
+p &amp;, x = 0, \\
+1 - p &amp;, x = 1, \\
+0 &amp;, \text{otherwise.}
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(X\)</span> models the outcome of a
+<em>Bernoulli trial</em>, that is, a trial with two possible outcomes:
+success or failure.</p>
+<h3 data-number="5.1.1" id="expectation"><span
+class="header-section-number">5.1.1</span> Expectation</h3>
+<p>Let <span class="math inline">\(X \sim \mathrm{Bern}(p)\)</span>.
+Then,</p>
+<p><span class="math display">\[
+\mathbb{E}(X) = p.
+\]</span></p>
+<h3 data-number="5.1.2" id="variance"><span
+class="header-section-number">5.1.2</span> Variance</h3>
+<p>Let <span class="math inline">\(X \sim \mathrm{Bern}(p)\)</span>.
+Then,</p>
+<p><span class="math display">\[
+\mathrm{Var}(X) = p(1 - p).
+\]</span></p>
+<h2 data-number="5.2" id="binomial-distribution"><span
+class="header-section-number">5.2</span> Binomial Distribution</h2>
+<p>Let <span class="math inline">\(Y_{1}, \dots, Y_{n}\)</span> be
+identically and independently distributed (i.i.d.) <a
+href="5-discrete-probability-distributions.html#bernoulli-distribution">Bernoulli</a>
+random variables, denoted <span class="math inline">\(Y_{1}, \dots,
+Y_{n} \sim \mathrm{Bern}(p)\)</span>. Then,</p>
+<p><span class="math display">\[
+X = \sum_{k = 1}^{n} Y_{k}
+\]</span></p>
+<p>is a random variable that follows a binomial distribution with <span
+class="math inline">\(n\)</span> trials and sucess probability <span
+class="math inline">\(p\)</span>, denoted <span class="math inline">\(X
+\sim \mathrm{B}(n,p)\)</span>. <span class="math inline">\(X\)</span>
+models the number of successes of <span class="math inline">\(n\)</span>
+independent Bernoulli trials with success probability <span
+class="math inline">\(p\)</span>. Furthermore,</p>
+<p><span class="math display">\[
+\mathbb{P}(X = x) = \begin{cases}
+\binom{n}{x} p^{x}(1-p)^{n-x} &amp;, x = 0, \dots, n; \\
+0 &amp;, \text{otherwise.}
+\end{cases}
+\]</span></p>
+<h3 data-number="5.2.1" id="expectation-1"><span
+class="header-section-number">5.2.1</span> Expectation</h3>
+<p>Let <span class="math inline">\(X \sim \mathrm{B}(n,p)\)</span>.
+Then,</p>
+<p><span class="math display">\[
+\mathbb{E}(X) = np.
+\]</span></p>
+<p>The easiest way to derive the expectation (and variance) of a
+binomial random variable is using that for the <a
+href="5-discrete-probability-distributions.html#bernoulli-distribution">Bernoulli
+random variable</a>.</p>
+<h3 data-number="5.2.2" id="variance-1"><span
+class="header-section-number">5.2.2</span> Variance</h3>
+<p>Let <span class="math inline">\(X \sim \mathrm{B}(n,p)\)</span>.
+Then,</p>
+<p><span class="math display">\[
+\mathrm{Var}(X) = np(1 - p).
+\]</span></p>
+<h2 data-number="5.3" id="geometric-distribution"><span
+class="header-section-number">5.3</span> Geometric Distribution</h2>
+<p>Let <span class="math inline">\(X\)</span> be a random variable that
+follows a geometric distribution with success probability <span
+class="math inline">\(p\)</span>, denoted <span class="math inline">\(X
+\sim \mathrm{Geom}(p)\)</span>. Then,</p>
+<p><span class="math display">\[
+\mathbb{P}(X = x) = \begin{cases}
+p(1-p)^{x - 1} &amp;, x \in \{ 1, 2, \dots \}, \\
+0 &amp;, \text{otherwise.}
+\end{cases}
+\]</span></p>
+<p><span class="math inline">\(X\)</span> models the number of
+independent Bernoulli trials up to and including the first success.</p>
+<h3 data-number="5.3.1" id="expectation-2"><span
+class="header-section-number">5.3.1</span> Expectation</h3>
+<p>Let <span class="math inline">\(X \sim \mathrm{Geom}(p)\)</span>.
+Then,</p>
+<p><span class="math display">\[
+\mathbb{E}(X) = \frac{1}{p}.
+\]</span></p>
+<h4 data-number="5.3.1.1" id="proof"><span
+class="header-section-number">5.3.1.1</span> Proof</h4>
+<p>By the definition of the expectation of a random variable,</p>
+<p><span class="math display">\[
+\mathbb{E}(X) = \sum_{x = 1}^{\infty} x\mathbb{P}(X = x).
+\]</span></p>
+<p>Then, using <span class="math inline">\(\mathbb{P}(X = x) =
+p(1-p)^{x-1}\)</span> for <span class="math inline">\(x \in \{ 1, 2,
+\dots \}\)</span>,</p>
+<p><span class="math display">\[\begin{align}
+    \mathbb{E}(X) &amp;= \sum_{x = 1}^{\infty} xp(1-p)^{x - 1} \\
+    &amp;= p \sum_{x = 1}^{\infty} x(1-p)^{x - 1} \\
+    &amp;= p \bigl( 1 + 2(1-p) + 3(1-p)^{2} + 4(1-p)^{3} + \dots \bigr)
+\\
+    &amp; \begin{aligned}
+        &amp;= p \Bigl( \bigl( 1 + (1-p) + (1-p)^{2} + (1-p)^{3} + \dots
+\bigr) \\
+        &amp; \quad + \bigl( (1-p) + (1-p)^{2} + (1-p)^{3} + (1-p)^{4} +
+\dots \bigr) \\
+        &amp; \quad + \bigl( (1-p)^{2} + (1-p)^{3} + (1-p)^{4} +
+(1-p)^{5} + \dots \bigr) \\
+        &amp; \quad + \dots \Bigr)
+    \end{aligned} \\
+    &amp; \begin{aligned}
+        &amp;= p \Bigl( \bigl( 1 + (1-p) + (1-p)^{2} + (1-p)^{3} + \dots
+\bigr) \\
+        &amp; \quad + (1-p)\bigl( 1 + (1-p) + (1-p)^{2} + (1-p)^{3} +
+\dots \bigr) \\
+        &amp; \quad + (1-p)^{2}\bigl( 1 + (1-p) + (1-p)^{2} + (1-p)^{3}
++ \dots \bigr) \\
+        &amp; \quad + \dots \Bigr ).
+    \end{aligned}
+\end{align}\]</span></p>
+<p>We can factorise this expression by taking out <span
+class="math inline">\(\bigl(1 + (1-p) + (1-p)^{2} + (1-p)^{3} + \dots
+\bigr)\)</span>, which gives</p>
+<p><span class="math display">\[
+\begin{align}
+    \mathbb{E}(X)
+    &amp;= p \bigl( 1 + (1-p) + (1-p)^{2} + (1-p)^{3} + \dots \bigr)
+\bigl( 1 + (1-p) + (1-p)^{2} + (1-p)^{3} + \dots \bigr) \\
+    &amp;= p \left( \sum_{n=0}^{\infty} (1-p)^{n} \right)^{2}.
+\end{align}
+\]</span></p>
+<p>Finally, since <span class="math inline">\(\sum_{n=0}^{\infty} r^{n}
+= \frac{1}{1-r}\)</span> for <span class="math inline">\(|r| &lt;
+1\)</span>,</p>
+<p><span class="math display">\[
+\begin{align}
+    \mathbb{E}(X)
+    &amp;= p \left( \frac{1}{1 - (1 - p)} \right)^{2} \\
+    &amp;= \frac{1}{p}.
+\end{align}
+\]</span></p>
+<h2 data-number="5.4" id="poisson-distribution"><span
+class="header-section-number">5.4</span> Poisson Distribution</h2>
+</body>
+</html>
