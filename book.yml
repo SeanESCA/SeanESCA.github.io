@@ -1,13 +1,16 @@
 metadata:
-    title: Sean's Revision Notes
-    author: "Sean Soon"
+  title: Sean's Revision Notes
+  author: "Sean Soon"
 
 css:
-  - ../css/base.css 
-  - ../css/callout.css
-  - ../css/screen.css
-  - ../css/print.css
-  
+- ../css/base.css 
+- ../css/callout.css
+- ../css/screen.css
+- ../css/print.css
+
+filters:
+- ../lua/tikz.lua
+
 html-math-method:
   method: mathjax
 
@@ -18,9 +21,9 @@ toc-depth: 2
 number-sections: true
 split-level: 1
 input-files:
-- ./md/powersandroots.md
-- ./md/sequences.md
-- ./md/transformations.md
-- ./md/probability.md
-- ./md/independence.md
-- ./md/discretedistributions.md
+- ./md/notes/powersandroots.md
+- ./md/notes/sequences.md
+- ./md/notes/transformations.md
+- ./md/notes/probability.md
+- ./md/notes/independence.md
+- ./md/notes/discretedistributions.md
